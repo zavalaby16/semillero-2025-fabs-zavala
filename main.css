@@ -1,0 +1,355 @@
+/* --- VARIABLES: Define la paleta de colores para fácil edición --- */
+:root {
+    /* Paleta Eco-Tech */
+    --bg-dark: #022c22; /* Verde muy oscuro casi negro */
+    --text-main: #ecfdf5; /* Blanco menta suave */
+    --text-muted: #a7f3d0; /* Verde claro suave */
+    --accent-primary: #10b981; /* Verde esmeralda vibrante */
+    --accent-secondary: #06b6d4; /* Cian tecnológico */
+    --glass-bg: rgba(255, 255, 255, 0.05); /* Fondo de cristal muy transparente */
+    --glass-border: rgba(255, 255, 255, 0.1);
+}
+
+/* --- RESET BÁSICO --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: 0.3s;
+}
+
+/* --- ESTILOS DE CRISTAL (Glassmorphism) --- */
+.glass-panel {
+    background: var(--glass-bg);
+    backdrop-filter: blur(12px);
+    border: 1px solid var(--glass-border);
+    border-radius: 16px;
+    padding: 2rem;
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.glass-panel:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent-primary);
+}
+
+/* --- EFECTOS DE TEXTO --- */
+.gradient-text {
+    background: linear-gradient(to right, var(--accent-primary), var(--accent-secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    background-clip: text;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: var(--text-main);
+}
+
+.section-pad {
+    padding: 80px 0;
+}
+
+/* --- BOTONES Y BADGES --- */
+.btn-primary {
+    display: inline-block;
+    padding: 12px 30px;
+    background: var(--accent-primary);
+    color: #000;
+    font-weight: bold;
+    border-radius: 50px;
+    transition: 0.3s;
+}
+
+.btn-primary:hover {
+    box-shadow: 0 0 15px var(--accent-primary);
+    transform: scale(1.05);
+}
+
+.btn-secondary {
+    display: inline-block;
+    padding: 12px 30px;
+    border: 1px solid var(--text-main);
+    color: var(--text-main);
+    border-radius: 50px;
+    margin-left: 10px;
+    transition: 0.3s;
+}
+
+.btn-secondary:hover {
+    background: rgba(255,255,255,0.1);
+}
+
+.pill-badge {
+    background: rgba(16, 185, 129, 0.1);
+    color: var(--accent-primary);
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* --- BACKGROUND ANIMATION (BLOBS) --- */
+.blob-container {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    z-index: -1;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.blob {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.3;
+    animation: float 10s infinite alternate;
+}
+/* Define posiciones y colores de los blobs */
+.blob-1 { width: 400px; height: 400px; background: var(--accent-primary); top: -10%; left: -10%; }
+.blob-2 { width: 300px; height: 300px; background: var(--accent-secondary); bottom: 10%; right: -5%; animation-delay: 2s; }
+.blob-3 { width: 200px; height: 200px; background: #6b21a8; top: 40%; left: 40%; opacity: 0.15; animation-delay: 4s; }
+
+@keyframes float {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(30px, 50px); }
+}
+
+/* --- NAVEGACIÓN --- */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    background: rgba(2, 44, 34, 0.85); /* Fondo semitransparente oscuro */
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--glass-border);
+}
+
+.nav-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+}
+
+.logo {
+    font-weight: 900;
+    font-size: 1.5rem;
+    letter-spacing: -1px;
+    color: var(--accent-primary);
+}
+
+.nav-links a {
+    opacity: 0.8;
+    margin-left: 20px;
+    font-size: 0.9rem;
+}
+
+.nav-links a:hover {
+    opacity: 1;
+    color: var(--accent-secondary);
+}
+
+.btn-highlight {
+    border: 1px solid var(--accent-secondary);
+    padding: 5px 15px;
+    border-radius: 20px;
+}
+
+/* --- HERO SECTION --- */
+.hero-section {
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 100px; 
+    flex-wrap: wrap;
+}
+
+.hero-section h1 {
+    font-size: 4.5rem;
+    line-height: 1;
+    margin: 20px 0;
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    color: var(--text-muted);
+    margin-bottom: 30px;
+    max-width: 500px;
+}
+
+.image-wrapper {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid var(--glass-border);
+    box-shadow: 0 0 30px rgba(16, 185, 129, 0.3);
+}
+
+.image-wrapper img {
+    object-fit: cover;
+}
+
+/* --- TRAYECTORIA GRID --- */
+.timeline-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.job-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.job-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 10px;
+    border-bottom: 1px solid var(--glass-border);
+    padding-bottom: 10px;
+}
+
+.job-header h3 {
+    font-size: 1.1rem;
+    color: var(--accent-secondary);
+}
+
+.date {
+    font-size: 0.8rem;
+    opacity: 0.7;
+    white-space: nowrap;
+}
+
+.job-card ul {
+    list-style-position: inside;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    list-style-type: '🌱 '; /* Icono custom para la lista */
+    padding-left: 0;
+}
+
+/* --- SKILLS & EDU --- */
+.skills-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+}
+
+.skills-col {
+    flex: 1;
+    min-width: 300px;
+}
+
+.tech-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.tech-item {
+    text-align: center;
+    width: 100px;
+    padding: 15px 5px;
+    font-size: 0.9rem;
+}
+
+.tech-item img {
+    width: 50px;
+    height: 50px;
+    margin: 0 auto 10px;
+    object-fit: contain;
+}
+
+.icon-svg {
+    width: 30px;
+    height: 30px;
+    margin: 0 auto 10px;
+    color: var(--accent-primary);
+}
+
+.education-list .edu-item {
+    border-left: 2px solid var(--accent-primary);
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
+
+.education-list h4 {
+    color: var(--accent-secondary);
+}
+
+/* --- FOOTER --- */
+footer {
+    text-align: center;
+    padding: 80px 20px;
+    background: rgba(0,0,0,0.2);
+    border-top: 1px solid var(--glass-border);
+    margin-top: 50px;
+}
+
+.linkedin-btn {
+    background: #0077b5; 
+    color: white;
+    margin-bottom: 15px;
+}
+
+.email-btn {
+    /* Usamos el estilo secundario base pero le damos un color de borde más visible */
+    background: #0077b5;
+    border: 1px solid var(--accent-secondary);
+    color: white;
+    margin-bottom: 15px; /* Espacio antes del copyright */
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 900px) {
+    .hero-section { flex-direction: column-reverse; }
+    .hero-section h1 { font-size: 3rem; text-align: center; }
+    .hero-text { text-align: center; }
+    .hero-btns { justify-content: center; }
+    .btn-secondary { margin-left: 0; margin-top: 10px;}
+}
+
+@media (max-width: 768px) {
+    .nav-links { display: none; }
+    .about-section .glass-panel { padding: 2rem; }
+    .timeline-grid { grid-template-columns: 1fr; }
+}
