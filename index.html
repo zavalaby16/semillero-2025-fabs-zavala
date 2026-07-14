@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portafolio de Fabiola Zavala - Bio-innovación y Sostenibilidad">
+    <title>Fabiola Zavala | Bio-Tech</title>
+    <!-- Vinculamos tu CSS, debe estar en la carpeta principal -->
+    <link rel="stylesheet" href="main.css">
+    <!-- Fuentes modernas de Google (Outfit) -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Fondo Animado (Blobs de color que dan sensación de movimiento) -->
+    <div class="blob-container">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <!-- Navegación Fija con efecto de cristal -->
+    <nav class="glass-nav">
+        <div class="nav-content container">
+            <div class="logo">Fabs Zavala</div>
+            <div class="nav-links">
+                <a href="#inicio">Inicio</a>
+                <a href="#trayectoria">Trayectoria</a>
+                <a href="#skills">Habilidades</a>
+                <a href="#contacto" class="btn-highlight">Contacto</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- SECCIÓN HERO: La primera vista y título principal -->
+    <section id="inicio" class="hero-section container">
+        <div class="hero-text">
+            <span class="pill-badge">Biología &bull; Tecnología &bull; Futuro</span>
+            <h1>Fabiola <br> <span class="gradient-text">Zavala</span></h1>
+            <p class="hero-subtitle">
+                Impulsando la <strong>Bio-innovación</strong> y la <strong>Sostenibilidad</strong> a través de datos y colaboraciones estratégicas.
+            </p>
+            <div class="hero-btns">
+                <a href="#contacto" class="btn-primary">Hablemos</a>
+                <a href="#trayectoria" class="btn-secondary">Ver Experiencia</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <div class="image-wrapper">
+                <!-- IMPORTANTE: Asegúrate de que tu imagen de perfil esté en img/perfil.jpg -->
+                <img src="img/perfil.jpeg" alt="Fabiola Zavala" onerror="this.src='https://via.placeholder.com/400'">
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN: Sobre Mí (Panel de cristal centrado) -->
+    <section class="about-section">
+        <div class="container glass-panel">
+            <h2>Sobre Mí</h2>
+            <p>
+                Soy bióloga enfocada en ecología y conservación, con una fuerte pasión por la <strong>neurociencia y el comportamiento</strong>. 
+                Me apasiona el trabajo de campo, el laboratorio y la técnlogía. Me encanta aprender cosas nuevas.
+                Busco conectar la ciencia de datos con soluciones reales para la biodiversidad.
+            </p>
+        </div>
+    </section>
+
+    <!-- SECCIÓN: Trayectoria Profesional (Organizado en tarjetas tipo Timeline) -->
+    <section id="trayectoria" class="container section-pad">
+        <h2 class="section-title">Trayectoria Profesional</h2>
+        <div class="timeline-grid">
+            
+            <!-- Tarjeta 1: Investigación -->
+            <div class="job-card glass-panel">
+                <div class="job-header">
+                    <h3>Investigación Independiente</h3>
+                    <span class="date">2025 - Actualidad</span>
+                </div>
+                <h4>Análisis de Microplásticos en Primates</h4>
+                <ul>
+                    <li>Conceptualización y Diseño Metodológico.</li>
+                    <li>Análisis e Interpretación mediante software R.</li>
+                    <li>Redacción Científica y trabajo de laboratorio.</li>
+                </ul>
+            </div>
+
+            <!-- Tarjeta 2: Akumal Monkey Sanctuary -->
+            <div class="job-card glass-panel">
+                <div class="job-header">
+                    <h3>Akumal Monkey Sanctuary</h3>
+                    <span class="date">Dic 2024 – Ago 2025</span>
+                </div>
+                <ul>
+                    <li>Monitoreo y manejo etológico de primates no humanos.</li>
+                    <li>Diseño de programas de enriquecimiento ambiental.</li>
+                    <li>Análisis de datos de cámaras trampa.</li>
+                </ul>
+            </div>
+
+            <!-- Tarjeta 3: Ballenas A.C. -->
+            <div class="job-card glass-panel">
+                <div class="job-header">
+                    <h3>Ecología y Conservación de Ballenas A.C.</h3>
+                    <span class="date">2017 | 2023-2024</span>
+                </div>
+                <ul>
+                    <li>Monitoreo de ballena jorobada (fotoidentificación).</li>
+                    <li>Gestión y capacitación de voluntarios.</li>
+                    <li>Diseño de materiales de divulgación educativa.</li>
+                </ul>
+            </div>
+
+            <!-- Tarjeta 4: Lab. Biología -->
+            <div class="job-card glass-panel">
+                <div class="job-header">
+                    <h3>Lab. Biología – Univ. de Guanajuato</h3>
+                    <span class="date">2020 - 2022</span>
+                </div>
+                <ul>
+                    <li>Análisis de muestras biológicas (zooplancton, microplásticos).</li>
+                    <li>Manejo de bases de datos y análisis estadísticos.</li>
+                </ul>
+            </div>
+            
+            <!-- Tarjeta 5: Formación (Expandida) -->
+            <div class="job-card glass-panel" style="grid-column: 1 / -1; padding: 20px 40px;">
+                <h3 style="color: var(--accent-primary);">Formación Académica</h3>
+                <div style="display: flex; justify-content: space-around; flex-wrap: wrap;">
+                    <div style="margin: 10px;">
+                        <h4>Posgrado en Biología</h4>
+                        <p style="opacity: 0.7;">Universidad de Guanajuato</p>
+                    </div>
+                    <div style="margin: 10px;">
+                        <h4>Licenciatura en Biología</h4>
+                        <p style="opacity: 0.7;">Universidad de Guadalajara</p>
+                    </div>
+                    <div style="margin: 10px;">
+                        <h4>Diplomado en Restauración de ecosistemas</h4>
+                        <p style="opacity: 0.7;">CIDES</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECCIÓN: Habilidades y Herramientas (En dos columnas) -->
+    <section id="skills" class="container section-pad">
+        <div class="skills-wrapper">
+            <!-- Columna Izquierda: Tech & Software -->
+            <div class="skills-col">
+                <h2 class="section-title">Software</h2>
+                <div class="tech-grid">
+                    <div class="tech-item glass-panel">
+                        <!-- Imagen de R.png en la carpeta img/ -->
+                        <img src="img/R.png" alt="R Studio" onerror="this.style.display='none'"> 
+                        <span>R Statistics</span>
+                    </div>
+                    <div class="tech-item glass-panel">
+                        <!-- Imagen de qgis.png en la carpeta img/ -->
+                        <img src="img/qgis.png" alt="QGIS" onerror="this.style.display='none'">
+                        <span>QGIS (GIS)</span>
+                    </div>
+                    <div class="tech-item glass-panel">
+                        <!-- Icono SVG genérico para manejo de datos/documentos -->
+                         <img src="img/data.png" alt="tech" onerror="this.style.display='none'">
+                        <span>Data Mgmt.</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Columna Derecha: Certificaciones e Idiomas -->
+            <div class="skills-col">
+                <h2 class="section-title">Certificaciones e  Idiomas</h2>
+                <div class="education-list">
+                    <div class="edu-item">
+                        <h4>ISO 14001:2015</h4>
+                        <p>Sistema de gestión ambiental</p>
+                    </div>
+                    <div class="edu-item">
+                        <h4>DC-3 Supervisor Ambiental</h4>
+                        <p>Manejo de residuos peligrosos</p>
+                    </div>
+                    <div class="edu-item">
+                        <h4>Primeros Auxilios y Rescates</h4>
+                        <p>Certificación en emergencias de campo.</p>
+                    </div>
+                    <div class="edu-item">
+                        <h4>Idiomas</h4>
+                        <p>Español (Nativo), Inglés (Intermedio), Italiano (Intermedio)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer / Contacto -->
+    <footer id="contacto">
+        <div class="container footer-content">
+            <h2>¿Trabajamos juntos?</h2>
+            <p>Disponible para proyectos de conservación, colaboraciones, análisis de datos y educación ambiental.</p>
+            
+            <a href="https://www.linkedin.com/in/zavalaby/" target="_blank" class="btn-primary linkedin-btn">
+                LinkedIn
+            </a>
+
+            <!-- NUEVO BOTÓN DE CORREO ELECTRÓNICO -->
+            <a href="mailto:zavalaby@gmail.com" class="btn-secondary email-btn">
+                Enviar Correo
+            </a>
+
+            <div class="copyright">
+                <p>&copy; Fabs Zavala. Diseñado con pasión por la ciencia.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
